@@ -1,0 +1,80 @@
+/* Algemene stijlregels voor de gehele pagina */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* Headerstijl met achtergrondafbeelding */
+header {
+    background-image: url('woonplaats.jpg'); /* Vervang door de URL van uw afbeelding */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Stijlen voor het centrale gedeelte */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Stijl voor het linkerdeel met vijf feitjes */
+.left {
+    flex: 2;
+    background-color: #e0e0e0;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+/* Stijl voor het rechterdeel met artikelen en afbeeldingen */
+.right {
+    flex: 9;
+    background-color: #d0d0d0;
+    padding: 10px;
+}
+
+/* Stijl voor de artikelen en afbeeldingen binnen het rechterdeel */
+.right .article {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.right .article img {
+    margin-left: 20px;
+    max-width: 100px;
+}
+
+/* Footerstijl */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Mediaquery voor responsive ontwerp */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .right .article {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .right .article img {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
